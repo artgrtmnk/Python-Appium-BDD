@@ -11,9 +11,9 @@
 
 ### Main Dependancies
 Install packages in the root folder:
-- Appium-Python-Client: `pip3 install appium-python-client`
-- Behave: `pip3 install behave`
-- Allure-Behave: `pip3 install allure-behave`
+- Appium-Python-Client: `pip install appium-python-client`
+- Behave: `pip install behave`
+- Allure-Behave: `pip install allure-behave`
 
 ### Device setup
 1. Open Settings on your Android device and and scroll down to `About phone` option and tap on it `7 times`. You will unblock the developer options with this action.
