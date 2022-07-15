@@ -9,8 +9,10 @@
 - Use Android device only. There is no implementation for iOS.
 - Optional: Install Allure to open the detailed report after test: `brew install allure`
 
+### All packages installation
+Simply type `pip install -r requirements.txt` into the terminal.
+
 ### Main Dependancies
-Install packages in the root folder:
 - Appium-Python-Client: `pip install appium-python-client`
 - Behave: `pip install behave`
 - Allure-Behave: `pip install allure-behave`
