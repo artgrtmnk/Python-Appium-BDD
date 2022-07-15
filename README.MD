@@ -31,8 +31,8 @@ Install packages in the root folder:
 3. **Important: That's the prod version of the app, and we cannot proceed through the email or two-factor auth with this framework. You need to login and proceed to the Home screen first manually. After it, Appium won't clear app's cache and use your account to execute test.**
 
 ### Start the test
-In project's root directory type `behave features/change_weight.feature`
-To get the report after test type `behave -f allure_behave.formatter:AllureFormatter -o ./features/artifacts/reports ./features`
+In project's root directory type `behave features/change_weight.feature`.
+To get the report after test type `behave -f allure_behave.formatter:AllureFormatter -o ./features/artifacts/reports ./features`.
 
 ### After test
 When test would be finished, in the features/artifacts folder you can find a screenshot of the successful run.
