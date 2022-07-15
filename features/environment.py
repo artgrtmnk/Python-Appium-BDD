@@ -14,12 +14,12 @@ def before_feature(context, feature):
         pass
 
     context.driver = webdriver.Remote(
-        command_executor='http://127.0.0.1:4723/wd/hub',
+        command_executor='http://127.0.0.1:4723/wd/hub',  # you need to specify your ip and port if it is different (same as in Appium)
         desired_capabilities={
             "platformName": "Android",
-            "platformVersion": "12",
-            "deviceName": "S21 Artem",
-            "udid": "R5CR82BS9WV",
+            "platformVersion": "",  # you need to specify your Android version
+            "deviceName": "",  # you need to specify your Device name
+            "udid": "",  # you need to specify your udid
             "appActivity": "com.withings.wiscale2.MainActivity",
             "appPackage": "com.withings.wiscale2",
             "noReset": "true",
