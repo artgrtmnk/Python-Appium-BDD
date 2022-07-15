@@ -32,13 +32,17 @@ Install packages in the root folder:
 
 ### Start the test
 In project's root directory type `behave features/change_weight.feature`.
+
 To get the report after test type `behave -f allure_behave.formatter:AllureFormatter -o ./features/artifacts/reports ./features`.
 
 ### After test
-When test would be finished, in the features/artifacts folder you can find a screenshot of the successful run.
-Also, in the features/artifacts/reports folder, you can find an Allure report in JSON forman.
+When test would be finished, in the features/artifacts folder you can find screenshots for the successfully executed scenarios.
+
+If you chosen an option with generating report:
+In the features/artifacts/reports folder, you can find an Allure report in JSON forman.
 If you want to open in the html format, just type `allure serve ./features/artifacts/reports`.
-Remember, that reports folder would be cleared automatically when the next test run starts.
+
+Note: Remember, that artifacts folder (including screenshota and reports) would be cleared automatically when the next test run starts.
  
 
 
