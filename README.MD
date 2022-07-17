@@ -41,7 +41,8 @@ To get the report after test type `behave -f allure_behave.formatter:AllureForma
 When the test would be finished, in the `features/artifacts` folder you can find screenshots for the successfully executed scenarios.
 
 **If you have chosen an option with generating report:**
-In the `features/artifacts/reports` folder, you can find an Allure report in JSON forman.
+In the `features/artifacts/reports` folder, you can find an Allure report in JSON format.
+
 If you want to open in the `html` format, just type `allure serve ./features/artifacts/reports`.
 
 Note: Remember that `artifacts` folder (including screenshots and reports) would be cleared automatically when the next test run starts.
