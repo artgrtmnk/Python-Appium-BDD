@@ -58,4 +58,4 @@ def after_scenario(context, scenario):
 
 def after_feature(context, feature):
     context.driver.quit()
-    allure_report("features/artifacts")
+    allure_report("features/artifacts/reports")
