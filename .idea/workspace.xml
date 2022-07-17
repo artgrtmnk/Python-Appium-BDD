@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c2c8fd-2948-47b9-a7b8-29ddee07bc0d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/features/environment.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/environment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features/steps/add_weight_steps.py" beforeDir="false" afterPath="$PROJECT_DIR$/features/steps/add_weight_steps.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +28,8 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/artem.gritsaenko/PycharmProjects/healthMateAppiumBDD&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;last_opened_file_path&quot;: &quot;/Users/artem/Documents/GitHub/healthMate-Python-Appium-BDD&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.VCS&quot;
   }
 }</component>
   <component name="RecentsManager">
