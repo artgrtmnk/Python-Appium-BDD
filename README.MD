@@ -24,7 +24,7 @@ Simply type `pip install -r requirements.txt` into the terminal.
 4. Type adb devices, you will see `numbers` and word `device` in front of it. These numbers are your `udid`, you will need it pretty soon.
 5. Open `Appium GUI`  and click `Edit configurations`, specify your `ANDROID_HOME` and `JAVA_HOME` paths
 6. Start the Appium server, remember your Appium's server Host, you need to pass it to the `capabilities` in the project. (You can start the server with commandline as well).
-7. With PyCharm or any other IDE/Editor open the `capabilities.json` file in the project's root folder.
+7. Open the `capabilities.json` file in the project's root folder.
 8. Specify your `Appium server IP`, `Android version`, `Device name` and `udid` inside of this file.
 
 ### Almost ready
