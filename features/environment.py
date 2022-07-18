@@ -15,6 +15,7 @@ from pages.record_page import RecordPage
 
 
 def before_feature(context, feature):
+    # Cleaning artifacts folder
     reports = glob.glob('features/artifacts/reports/*')
     screenshots = glob.glob('features/artifacts/screenshots/*')
     folders = [reports, screenshots]
@@ -26,6 +27,13 @@ def before_feature(context, feature):
     except:
         pass
 
+    # Creating folder for screenshots
+    try:
+        os.mkdir('features/artifacts/screenshots')
+    except OSError as error:
+        print(error)
+
+    # Working with capabilities
     capabilities_json = open('capabilities.json')
     data = json.dumps(json.load(capabilities_json))
     capabilities_parsed = json.loads(data, object_hook=lambda d: SimpleNamespace(**d))
