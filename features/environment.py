@@ -13,8 +13,7 @@ from pages.home_page import HomePage
 from pages.add_weight_page import AddWeightPage
 from pages.record_page import RecordPage
 
-
-def before_feature(context, feature):
+def before_all(context):
     # Cleaning artifacts folder
     reports = glob.glob('features/artifacts/reports/*')
     screenshots = glob.glob('features/artifacts/screenshots/*')
@@ -33,10 +32,12 @@ def before_feature(context, feature):
     except OSError as error:
         print(error)
 
+
+def before_feature(context, feature):
     # Working with capabilities
     capabilities_json = open('capabilities.json')
-    data = json.dumps(json.load(capabilities_json))
-    capabilities_parsed = json.loads(data, object_hook=lambda d: SimpleNamespace(**d))
+    capabilities_data = json.dumps(json.load(capabilities_json))
+    capabilities_parsed = json.loads(capabilities_data, object_hook=lambda d: SimpleNamespace(**d))
 
     if capabilities_parsed.desired_capabilities.platformVersion == 'your_platform_version' \
             or capabilities_parsed.desired_capabilities.deviceName == 'your_device_name' \
