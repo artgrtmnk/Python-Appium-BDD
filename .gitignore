@@ -1,6 +1,4 @@
 .DS_Store
 .idea
-features/artifacts/screenshots/*
-features/artifacts/reports/*
 pages/__pycache__
 utils/__pycache__
