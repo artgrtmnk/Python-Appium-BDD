@@ -1,6 +1,8 @@
 import glob
 import os
 from datetime import datetime
+import json
+from types import SimpleNamespace
 
 import allure
 from allure_commons.types import AttachmentType
@@ -24,14 +26,22 @@ def before_feature(context, feature):
     except:
         pass
 
+    capabilities_json = open('capabilities.json')
+    data = json.dumps(json.load(capabilities_json))
+    capabilities_parsed = json.loads(data, object_hook=lambda d: SimpleNamespace(**d))
+
+    if capabilities_parsed.desired_capabilities.platformVersion == 'your_platform_version' \
+            or capabilities_parsed.desired_capabilities.deviceName == 'your_device_name' \
+            or capabilities_parsed.desired_capabilities.udid == 'your_udid':
+        raise Exception('Specify your capabilities in capabilities.json in the root folder!')
+
     context.driver = webdriver.Remote(
-        # you need to specify your ip and port in the next line if it is different (same as in Appium)
-        command_executor='http://127.0.0.1:4723/wd/hub',
+        command_executor=capabilities_parsed.command_executor,
         desired_capabilities={
-            "platformName": "Android",
-            "platformVersion": "",  # you need to specify your Android version
-            "deviceName": "",  # you need to specify your Device name
-            "udid": "",  # you need to specify your udid
+            "platformName": capabilities_parsed.desired_capabilities.platformName,
+            "platformVersion": capabilities_parsed.desired_capabilities.platformVersion,
+            "deviceName": capabilities_parsed.desired_capabilities.deviceName,
+            "udid": capabilities_parsed.desired_capabilities.udid,
             "appActivity": "com.withings.wiscale2.MainActivity",
             "appPackage": "com.withings.wiscale2",
             "noReset": "true",

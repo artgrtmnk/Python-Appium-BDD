@@ -1,4 +1,3 @@
-from re import search
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
@@ -35,5 +34,3 @@ class BasePage:
     def tap_on_element(self, loc):
         self.driver.find_element(loc[0], loc[1]).click()
 
-    def parse_weight(self, weight_string):
-        return float(search('[0-9.]+', weight_string).group())

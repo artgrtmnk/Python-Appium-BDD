@@ -1,0 +1,9 @@
+{
+  "command_executor": "http://127.0.0.1:4723/wd/hub",
+  "desired_capabilities": {
+            "platformName": "Android",
+            "platformVersion": "your_platform_version",
+            "deviceName": "your_device_name",
+            "udid": "your_udid"
+        }
+}
